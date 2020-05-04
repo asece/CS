@@ -158,5 +158,11 @@ Arrays and Strings are Classes
 Classes and Structures are treated different at runtime in terms of memory management.  
   
 Value Types | Reference Types |
---- | ---: |
-Structures | Classes |
+--- | :---: |
+**Structures** | **Classes** |
+-Allocated on stack | -Need to allocate memory from the heap
+-Memory allocation done automatically | -Garbage collected by CLR
+-Immediately removed when out of scope |
+  
+    var object1 = object2;
+  
