@@ -64,10 +64,10 @@
 
     }
 
-##Arrays
+# Arrays
 
 Array: A data structure used to store a collection of variables of the same type  
-    int[] numbers = new int[3];
+`int[] numbers = new int[3];`
 or use `var` instead of `int[]`
 
 1st []: inform the compiler we want to declare an array  
@@ -85,11 +85,71 @@ or supply the values of the array at the declaration: `int[] newNumbers = new in
 All of the elements are set to 0.
 An array of bool is initialized with false
 
-#String
+# String  
     string firstName = "Alex"
     string lastName = "Doe"
     string name = fistName + " " + lastName;
  This can be messy. String format can be used. String is mapped with the String class in `.Net Framework`.
 ex:
+    string name = string.Format("{0} {1}", firstName, lastName);
+Format is a static method.  
+{} - this are placeholders.  
+Other examples:  
+    var numbers = new int[3] {1,2,3,4};
+    string list = string .Join(",",numbers);  
+1st argument - separator  
+2nd argument - array we want to combine  
+  
+Strings are immutable - once created they cannot be changed.
+    string name = "Josh";
+    char fisrtChar = name[0];
+    name[0] = 'm'; <-- Operation not allowed!
+There are methods to manipulate strings and modify their values, but new strings are returned.
+  
+Verbatim Strings:
+    string path = "c:\\program\\project"; 
+    //too messy
+    string path = @"c:\program\project";
+  
+# Enum  
+  
+    public enum Shipping
+    {
+        const int Regular = 1;
+        const int Reg = 2;
+        const int Air = 3;
+    }
+    var method = Sipping.Regular;
 
+Enums are  by default expressed with integers. They can be set to byte by using `: byte` after the name of the enum.  
+If no value is set in the enum, then the 1st value will be 0 and the next will be incremented by 1.  
+
+    public enum ShippingMethod
+    {
+        RegularAir = 1,
+        RegisteredAir = 2,
+        Express = 3 
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var method = ShippingMethod.Express;
+            Console.WriteLine((int)method);
+            //Conversions
+            var methodId = 3;
+            Console.WriteLine((ShippingMethod)methodId);
+
+            Console.WriteLine(method.ToString());
+            //Console.WriteLine always calls the ToString() to whatever value it is passed.
+
+            var methodName = "Express";
+            //Get the string and get the number from the enum
+            var shippingMethod= (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);
+            Console.WriteLine(shippingMethod);
+        }
+# Reference types and Value types
+  
+  
 
