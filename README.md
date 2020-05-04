@@ -158,7 +158,7 @@ Arrays and Strings are Classes
 Classes and Structures are treated different at runtime in terms of memory management.  
   
 Value Types | Reference Types |
---- | :---: |
+:---: | :---: |
 **Structures** | **Classes** |
 -Allocated on stack | -Need to allocate memory from the heap
 -Memory allocation done automatically | -Garbage collected by CLR
