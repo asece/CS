@@ -64,14 +64,15 @@
 
     }
 
-Arrays
+##Arrays
 
-Array: A data structure used to store a collection of variables of the same type
+Array: A data structure used to store a collection of variables of the same type  
     int[] numbers = new int[3];
 or use `var` instead of `int[]`
 
-1st []: inform the compiler we want to declare an array
+1st []: inform the compiler we want to declare an array  
 2nd []: set the size of the array
+
 Arrays have a fixed size and cannot be changed. It is an object.
 Arrays are 0 indexed
 
@@ -79,9 +80,16 @@ Arrays are 0 indexed
     numbers[2] = 2;
     numbers[3] = 3;`
 
-or supply the values of the array at the declaration:
-    int[] newNumbers = new int[3] { 1, 2, 3 };
+or supply the values of the array at the declaration: `int[] newNumbers = new int[3] { 1, 2, 3 };`
 
 All of the elements are set to 0.
 An array of bool is initialized with false
+
+#String
+    string firstName = "Alex"
+    string lastName = "Doe"
+    string name = fistName + " " + lastName;
+ This can be messy. String format can be used. String is mapped with the String class in `.Net Framework`.
+ex:
+
 
