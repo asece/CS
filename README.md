@@ -1,4 +1,5 @@
-# CS
+# Csharp 101 
+  
     static void Main(string[] args)
     {
     Console.WriteLine("-----------------------------");
@@ -64,7 +65,7 @@
 
     }
 
-# Arrays
+## Arrays
 
 Array: A data structure used to store a collection of variables of the same type  
 `int[] numbers = new int[3];`
@@ -85,7 +86,7 @@ or supply the values of the array at the declaration: `int[] newNumbers = new in
 All of the elements are set to 0.
 An array of bool is initialized with false
 
-# String  
+## String  
     string firstName = "Alex"
     string lastName = "Doe"
     string name = fistName + " " + lastName;
@@ -111,7 +112,7 @@ Verbatim Strings:
     //too messy
     string path = @"c:\program\project";
   
-# Enum  
+## Enum  
   
     public enum Shipping
     {
@@ -149,7 +150,13 @@ If no value is set in the enum, then the 1st value will be 0 and the next will b
             var shippingMethod= (ShippingMethod) Enum.Parse(typeof(ShippingMethod), methodName);
             Console.WriteLine(shippingMethod);
         }
-# Reference types and Value types
+## Reference types and Value types
   
+All primitive types are structures, they take no more than 8 bytes.  
+Arrays and Strings are Classes 
   
-
+Classes and Structures are treated different at runtime in terms of memory management.  
+  
+Value Types | Reference Types |
+--- | ---: |
+Structures | Classes |
